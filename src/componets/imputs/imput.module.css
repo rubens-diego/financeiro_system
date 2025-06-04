@@ -1,0 +1,53 @@
+ 
+
+
+.container {
+   
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.inputComponent {
+  width: 100%;
+
+  padding-left: 5px;
+  font-size: 0.9rem;
+  color: --white;
+  border-radius: 5px;
+  border: 1px solid --primary;
+  outline: none;
+  background: --tertiary;
+  
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  display: block;
+  
+  margin: 0 0 20px;
+  padding: 8px 12px 10px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
+  
+}
+
+.label {
+  
+  font-size: 0.9rem;
+  
+  font-weight: bold;
+  color: --gray;
+  pointer-events: none;
+  padding-bottom: 5px;
+  color: --gray;
+  font-size: 1rem;
+  
+  font-weight: bold;
+}

@@ -3,7 +3,7 @@
 import { MongoClient } from "mongodb";
 
 const database_url = process.env.MONGO_DATABASE!;
-const dbName = "front";
+const dbName = "financeiro";
 const client = new MongoClient(database_url);
 
 export async function connectMongo() {

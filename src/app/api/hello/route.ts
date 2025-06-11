@@ -3,7 +3,7 @@
 import { connectMongo } from "@/utils/database";
 
 
-const collectionName = "gastos";
+const collectionName = "usuario";
 
 export async function GET() {
 
@@ -11,7 +11,7 @@ export async function GET() {
 
   const collection =  db.collection(collectionName);
 
-  const list = await collection.find({categoria: "Alimentación",}).toArray();
+  const list = await collection.find().toArray();
 
   return new Response(JSON.stringify(list));
 }

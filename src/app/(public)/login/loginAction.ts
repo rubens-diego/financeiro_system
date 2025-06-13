@@ -1,40 +1,36 @@
 "use server";
 
-import { auth, signIn } from "../../../auth";
- 
+import { signIn } from "@/auth";
+import { isRedirectError } from "next/dist/client/components/redirect-error";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
+
 export default async function loginAction(_prevState: any, formData: FormData) {
+  
+
   try {
-    console.log(
-      formData.get("login") as string,
-      formData.get("password") as string
-    );
+    
 
     await signIn("credentials", {
       email: formData.get("login") as string,
       password: formData.get("password") as string,
-      redirect: false,
-      redirectTo: "",
+      redirect: true,
+      redirectTo: "/dashboard",
     });
 
-    const aut = await auth();
+  } catch (error : any) {
 
-    if (aut) {
-      return {
-        susses: true,
-      };
-    } else {
-      return {
-        susses: false,
-        message: "login negado",
-      };
-    }
-  } catch (error) {
-    console.log(error);
+if (isRedirectError(error)){
+  throw error
+}
+
+   
+
+    if (  error.type === 'CredentialsSignin')
     return {
       susses: false,
       message: "login negado",
     };
   }
+
 }

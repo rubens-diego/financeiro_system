@@ -2,38 +2,38 @@
   
   
 
- --primary: "#a1a1a1",
-   --secondary: "#ebe8e8",
-    --tertiary: "#e4e4e4",
+ --primary: #a1a1a1;
+   --secondary: #ebe8e8;
+    --tertiary: #e4e4e4;
 
-    --white: "#000",
-    --black: "#FFF",
-    --gray: "#BFBFBF",
+    --white: #000;
+    --black: #FFF;
+    --gray: #BFBFBF;
 
-    --success: "#03BB85",
-    --info: "#3B5998",
-    --warning: "#FF6961",
+    --success: #03BB85;
+    --info: #3B5998;
+    --warning: #FF6961;
 
-    --typography: "#333",
+    --typography: #333;
 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     
---primary: "#090909",
-    --secondary: "#292929",
-    --tertiary: "#474747",
+--primary: #090909;
+    --secondary: #292929;
+    --tertiary: #474747;
 
-    --white: "#FFF",
-    --black: "#000",
-    --gray: "#BFBFBF",
+    --white: #FFF;
+    --black: #000;
+    --gray: #BFBFBF;
 
-    --success: "#4E41F0",
-    --info: "#F7931B",
-    --warning: "#E44C4E",
+    --success: #4E41F0;
+    --info: #F7931B;
+    --warning: #E44C4E;
 
-    --typography: "#c2c2c2",
+    --typography: #c2c2c2;
 
   }
 }
